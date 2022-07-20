@@ -22,6 +22,6 @@ if (eta > 18) {
     document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobiglietto.toFixed(2) + ('€');
 } else if (eta < 18) {
     document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobigliettominori.toFixed(2) + ('€');
-} else {
+} else if (eta > 65) {
     document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobiglietto65.toFixed(2) + ('€');
 }
