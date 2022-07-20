@@ -9,16 +9,16 @@ const prezzobiglietto = distanza * 0.21;
 // SI APPLICA SCONTO DEL 20% PER I MINORENNI, QUINDI:
 const scontominorenni = 0.2;
 console.log(scontominorenni);
-const prezzobigliettominori = prezzobiglietto * 1 - scontominorenni
+let prezzobigliettominori = prezzobiglietto - (prezzobiglietto * scontominorenni);
 // SI APPLICA SCONTO DEL 40% PER CHI HA SUPERATO I 65 ANNI
 const sconto65 = 0.4;
-const prezzobiglietto65 = prezzobiglietto * 1 - sconto65
+let prezzobiglietto65 = prezzobiglietto - (prezzobiglietto * sconto65);
 console.log(sconto65)
 
 
 // REGOLE
 
-if (eta > 18) {
+if (eta >= 18 && eta <= 65) {
     document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobiglietto.toFixed(2) + ('€');
 } else if (eta < 18) {
     document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobigliettominori.toFixed(2) + ('€');
