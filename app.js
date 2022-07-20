@@ -18,6 +18,10 @@ console.log(sconto65)
 
 // REGOLE
 
-if (eta < 18) {
-    
+if (eta > 18) {
+    document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobiglietto.toFixed(2) + ('€');
+} else if (eta < 18) {
+    document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobigliettominori.toFixed(2) + ('€');
+} else {
+    document.getElementById('title').innerHTML = ('il prezzo totale del tuo biglietto è: ') + prezzobiglietto65.toFixed(2) + ('€');
 }
